@@ -20,4 +20,4 @@ fi
 
 docker stop transmission
 docker rm transmission
-docker run -d --name=transmission --cap-add=NET_ADMIN --env-file bittorrent/transmission.env --env-file bittorrent/default.env -v share:/data -v /etc/localtime:/etc/localtime:ro --restart unless-stopped --log-driver json-file --log-opt max-size=10m -p 9091:9091 haugene/transmission-openvpn:latest-armhf
+docker run -d --name=transmission --cap-add=NET_ADMIN --env-file bittorrent/transmission.env --env-file bittorrent/default.env -v `pwd`/share/transmission:/data --restart unless-stopped -p 9091:9091 haugene/transmission-openvpn:latest-armhf

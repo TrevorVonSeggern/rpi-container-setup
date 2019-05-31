@@ -1,7 +1,7 @@
 #!/bin/bash
 mkdir -p share
 
-#samba
+# samba
 docker stop samba
 docker rm samba
 cd rpi-samba
@@ -10,3 +10,5 @@ cd ..
 ./rpi-samba/start.sh
 
 
+# transmission
+./bittorrent/start.sh
