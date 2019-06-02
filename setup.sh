@@ -12,3 +12,7 @@ cd ..
 
 # transmission
 ./bittorrent/start.sh
+
+
+#plex
+./plex/start.sh
