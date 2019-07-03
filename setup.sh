@@ -1,5 +1,12 @@
 #!/bin/bash
+
+cd /home/pirate/setup
+
+
 mkdir -p share
+
+# setup drive
+./usbhdd/start.sh
 
 # samba
 docker stop samba
